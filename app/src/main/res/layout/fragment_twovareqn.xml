@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".twovareqn">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/eq" />
+
+    <EditText
+        android:id="@+id/a1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+
+        android:layout_marginTop="78dp"
+        android:hint="a1"
+        android:textColor="#FF0000"
+        android:textSize="25dp" />
+
+    <EditText
+        android:id="@+id/b1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/img"
+        android:layout_alignLeft="@+id/img"
+
+        android:layout_alignTop="@+id/a1"
+        android:hint="b1"
+        android:textColor="#FF0000"
+        android:textSize="25dp" />
+
+    <EditText
+        android:id="@+id/c1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/a1"
+        android:textSize="25dp"
+        android:layout_marginRight="128dp"
+        android:layout_marginEnd="128dp"
+        android:hint="c1"
+        android:textColor="#FF0000" />
+
+    <EditText
+        android:id="@+id/a2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="171dp"
+        android:hint="a2"
+        android:textColor="#FF0000"
+        android:textSize="25dp" />
+
+    <EditText
+        android:id="@+id/b2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/img"
+        android:layout_alignStart="@+id/img"
+        android:layout_alignTop="@+id/a2"
+        android:hint="b2"
+        android:textColor="#FF0000"
+        android:textSize="25dp" />
+
+    <EditText
+        android:id="@+id/c2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/c1"
+        android:layout_alignTop="@+id/a2"
+        android:layout_alignLeft="@+id/c1"
+        android:hint="c2"
+        android:textColor="#FF0000"
+        android:textSize="25dp" />
+
+
+    <TextView
+        android:id="@+id/x"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="155dp"
+        android:text="X ="
+        android:textColor="#4B0082"
+        android:textSize="50dp" />
+
+    <TextView
+        android:id="@+id/valx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/x"
+        android:layout_marginLeft="83dp"
+        android:layout_marginStart="83dp"
+        android:textColor="#800000"
+        android:textSize="50dp" />
+
+    <Button
+        android:id="@+id/solve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="126dp"
+        android:text="solve"
+        android:textSize="30dp" />
+
+
+    <TextView
+        android:id="@+id/y"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/x"
+        android:layout_marginTop="-155dp"
+        android:text="Y ="
+        android:textColor="#4B0082"
+        android:textSize="50dp" />
+
+    <TextView
+        android:id="@+id/valy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/valx" android:layout_alignStart="@+id/valx"
+        android:layout_below="@+id/x"
+        android:layout_marginTop="-155dp"
+        android:textColor="#800000"
+        android:textSize="50dp" />
+
+    <TextView
+        android:id="@+id/help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="51dp"
+        android:text="Enter the values "
+        android:textColor="#FF00"
+        android:textSize="20dp" />
+
+</RelativeLayout>

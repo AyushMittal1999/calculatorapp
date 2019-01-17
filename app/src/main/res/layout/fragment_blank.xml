@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+    <EditText
+        android:id="@+id/edit1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="24dp"
+        android:hint="Enterr value1"
+        android:textColor="#FF0000"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/edit2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:textColor="#FF0000"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="85dp"
+        android:hint="Enterr value2"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/txt1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="150dp"
+        android:text="RESULT"
+        android:textSize="40dp"
+        android:textColor="#808"/>
+
+    <Button
+        android:id="@+id/plus"
+        android:layout_width="107dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/minus"
+        android:layout_width="107dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="127dp"
+        android:layout_marginRight="127dp"
+        android:text="-" />
+
+
+    <Button
+        android:id="@+id/multiply"
+        android:layout_width="107dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/divide"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="*" />
+
+    <Button
+        android:id="@+id/divide"
+        android:layout_width="107dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/minus"
+        android:layout_alignStart="@+id/minus"
+        android:layout_marginBottom="153dp"
+        android:text="/" />
+
+
+</RelativeLayout>
