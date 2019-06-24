@@ -1,161 +1,219 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:orientation="vertical"
     tools:context=".twovareqn">
 
-    <!-- TODO: Update blank fragment layout -->
-    <ImageView
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
         android:id="@+id/img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:text="ENTER VALUES IN FORMAT      AX+BY=C"
         android:src="@drawable/eq" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:orientation="horizontal">
+
 
     <EditText
         android:id="@+id/a1"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-
-        android:layout_marginTop="78dp"
         android:hint="a1"
-        android:textColor="#FF0000"
-        android:textSize="25dp" />
+        android:layout_weight="1"
+        android:padding="5dp"
+        android:inputType="numberDecimal"
+        android:textAlignment="viewEnd"
+        android:textColor="#000"
+        android:textSize="25dp"
+        android:gravity="end"
+        android:layout_gravity="end" />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="X+"
+          android:textSize="25dp"
+          android:textColor="#000"
+          android:layout_marginRight="7dp"/>
 
     <EditText
         android:id="@+id/b1"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:inputType="numberDecimal"
+        android:textAlignment="viewEnd"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/img"
-        android:layout_alignLeft="@+id/img"
-
-        android:layout_alignTop="@+id/a1"
+        android:padding="5dp"
         android:hint="b1"
-        android:textColor="#FF0000"
+        android:textColor="#000"
         android:textSize="25dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Y="
+            android:textSize="25dp"
+            android:textColor="#000"/>
 
     <EditText
         android:id="@+id/c1"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/a1"
         android:textSize="25dp"
-        android:layout_marginRight="128dp"
-        android:layout_marginEnd="128dp"
+        android:inputType="numberDecimal"
+        android:textAlignment="viewEnd"
         android:hint="c1"
-        android:textColor="#FF0000" />
+        android:padding="5dp"
+        android:textColor="#000" />
 
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:orientation="horizontal">
     <EditText
         android:id="@+id/a2"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:inputType="numberDecimal"
+        android:textAlignment="viewEnd"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="171dp"
+        android:padding="5dp"
         android:hint="a2"
-        android:textColor="#FF0000"
+        android:textColor="#000"
         android:textSize="25dp" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X+"
+            android:textSize="25dp"
+            android:textColor="#000"
+            android:layout_marginRight="7dp"/>
     <EditText
         android:id="@+id/b2"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/img"
-        android:layout_alignStart="@+id/img"
-        android:layout_alignTop="@+id/a2"
         android:hint="b2"
-        android:textColor="#FF0000"
+        android:inputType="numberDecimal"
+        android:textAlignment="viewEnd"
+        android:padding="5dp"
+        android:textColor="#000"
         android:textSize="25dp" />
 
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Y="
+            android:textSize="25dp"
+            android:textColor="#000"/>
     <EditText
         android:id="@+id/c2"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/c1"
-        android:layout_alignTop="@+id/a2"
-        android:layout_alignLeft="@+id/c1"
         android:hint="c2"
-        android:textColor="#FF0000"
+        android:inputType="numberDecimal"
+        android:textAlignment="viewEnd"
+        android:padding="5dp"
+        android:textColor="#000"
         android:textSize="25dp" />
 
+    </LinearLayout>
 
-    <TextView
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:orientation="horizontal">
+
+        <TextView
         android:id="@+id/x"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="155dp"
         android:text="X ="
-        android:textColor="#4B0082"
+        android:textColor="#000"
         android:textSize="50dp" />
 
     <TextView
         android:id="@+id/valx"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/x"
-        android:layout_marginLeft="83dp"
-        android:layout_marginStart="83dp"
+        android:padding="5dp"
         android:textColor="#800000"
         android:textSize="50dp" />
 
-    <Button
-        android:id="@+id/solve"
-        android:layout_width="wrap_content"
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="126dp"
-        android:text="solve"
-        android:textSize="30dp" />
-
-
+        android:layout_marginTop="7dp"
+        android:orientation="horizontal">
     <TextView
         android:id="@+id/y"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/x"
-        android:layout_marginTop="-155dp"
         android:text="Y ="
-        android:textColor="#4B0082"
+        android:padding="5dp"
+        android:textColor="#000"
         android:textSize="50dp" />
 
     <TextView
         android:id="@+id/valy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/valx" android:layout_alignStart="@+id/valx"
-        android:layout_below="@+id/x"
-        android:layout_marginTop="-155dp"
         android:textColor="#800000"
         android:textSize="50dp" />
 
+    </LinearLayout>
+
+        <Button
+            android:id="@+id/solve"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="solve"
+            android:textSize="30dp" />
+
     <TextView
         android:id="@+id/help"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="51dp"
+        android:layout_marginTop="25dp"
         android:text="Enter the values "
         android:textColor="#FF00"
-        android:textSize="20dp" />
+        android:textSize="25dp" />
 
-</RelativeLayout>
+
+    </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

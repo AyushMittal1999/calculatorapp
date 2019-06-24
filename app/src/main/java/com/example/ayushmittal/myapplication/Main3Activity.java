@@ -15,10 +15,9 @@ import android.widget.TextView;
 public class Main3Activity extends AppCompatActivity {
 
 
-    Button but;
-    private TextView mTextMessage;
     FragmentManager fragmentManager=getSupportFragmentManager();
     FragmentTransaction transaction= fragmentManager.beginTransaction();
+
 
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -30,7 +29,6 @@ public class Main3Activity extends AppCompatActivity {
             switch (item.getItemId()) {
 
                 case R.id.navigation_three:
-                    mTextMessage.setText("three equation mode");
                     if(getSupportFragmentManager().findFragmentById(R.id.content)!=null) {
                         FragmentManager fragmentManager = getSupportFragmentManager();
                         FragmentTransaction transaction0 = fragmentManager.beginTransaction();
@@ -39,10 +37,10 @@ public class Main3Activity extends AppCompatActivity {
                     FragmentManager fragmentManager22 = getSupportFragmentManager();
                     FragmentTransaction transaction22 = fragmentManager22.beginTransaction();
 
+                    transaction22.replace(R.id.content,new threevareqn()).commit();
 
 
-
-                  return true;
+                    return true;
                 case R.id.navigation_home:
                     if(getSupportFragmentManager().findFragmentById(R.id.content)!=null) {
                         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -56,11 +54,9 @@ public class Main3Activity extends AppCompatActivity {
                     transaction.replace(R.id.content,new BlankFragment()).commit();
 
 
-                    mTextMessage.setText("basic");
 
                     return true;
                 case R.id.navigation_dashboard:
-                    mTextMessage.setText("equation");
                     if(getSupportFragmentManager().findFragmentById(R.id.content)!=null) {
                         FragmentManager fragmentManager1 = getSupportFragmentManager();
                         FragmentTransaction transaction1 = fragmentManager1.beginTransaction();
@@ -75,7 +71,6 @@ public class Main3Activity extends AppCompatActivity {
 
                     return true;
                 case R.id.navigation_notifications:
-                    mTextMessage.setText("contact developer @  AYUSH MITTAL");
                     if(getSupportFragmentManager().findFragmentById(R.id.content)!=null) {
                        // FragmentManager fragmentManager = getSupportFragmentManager();
                         fragmentManager=getSupportFragmentManager();
@@ -83,6 +78,11 @@ public class Main3Activity extends AppCompatActivity {
 
                         transaction2.remove(getSupportFragmentManager().findFragmentById(R.id.content)).commit();
                     }
+
+                    FragmentManager fragmentManager12 = getSupportFragmentManager();
+                    FragmentTransaction transaction12 = fragmentManager12.beginTransaction();
+
+                    transaction12.replace(R.id.content,new developerfrag()).commit();
                     return true;
             }
             return false;
@@ -94,21 +94,41 @@ public class Main3Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
 
-        mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-            but=(Button)findViewById(R.id.but);
-        transaction.replace(R.id.content,new BlankFragment()).commit();
-                    but.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent a=new Intent(Main3Activity.this,MainActivity.class);
-                            startActivity(a);
 
-                        }
-                    });
+        getSupportActionBar().setTitle("Calculation");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+
+        if(getSupportFragmentManager().findFragmentById(R.id.content)!=null) {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction transaction = fragmentManager.beginTransaction();
+
+            transaction.remove(getSupportFragmentManager().findFragmentById(R.id.content)).commit();
+        }
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+
+        transaction.replace(R.id.content,new BlankFragment()).commit();
+
 
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+
+                Intent intent = new Intent(Main3Activity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 }

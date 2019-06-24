@@ -10,29 +10,13 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-
-        android:layout_height="450dp"
-        
-
-        android:id="@+id/content"
-        >
+        android:layout_height="match_parent"
+        android:layout_marginBottom="55dp"
+        android:id="@+id/content">
     </FrameLayout>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/message"
-        android:text="Calculator"/>
 
-    <Button
-        android:id="@+id/but"
-        app:layout_constraintBottom_toTopOf="@+id/navigation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="388dp"
 
-        android:text="CLICK HERE TO RETURN"
 
-        app:layout_constraintTop_toBottomOf="@+id/message" />
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"

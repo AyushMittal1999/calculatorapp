@@ -3,6 +3,7 @@ package com.example.ayushmittal.myapplication;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -55,10 +56,15 @@ public class BlankFragment extends Fragment {
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                try{
                 num1=Float.parseFloat(edit1.getText().toString());
                 num2=Float.parseFloat(edit2.getText().toString());
                 res=num1+num2;
-                result.setText(String.valueOf(res));
+                result.setText(String.valueOf(res));}
+                catch (Exception e){
+                    Snackbar.make(getView(),"Wrong Format of equation !!",Snackbar.LENGTH_LONG).show();
+
+                }
             }
         });
 
@@ -98,5 +104,12 @@ public class BlankFragment extends Fragment {
 
 
         return v;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Snackbar.make(getView() , "Click on Operation button to perform operation" ,Snackbar.LENGTH_LONG).show();
+
     }
 }
