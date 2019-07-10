@@ -12,6 +12,6 @@
         android:textColor="#000"
         android:layout_margin="10dp"
         android:padding="5dp"
-        android:text="Developer:\n\nSuggestion are highly invited\n\n AYUSH MITTAL\n@ github.com/Ayush1990developer/" />
+        android:text="Developer:\n\nSuggestion are highly invited\n\n AYUSH MITTAL\n@ github.com/AyushMittal1999" />
 
 </FrameLayout>
